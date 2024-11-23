@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Navbar from "./Components/Navbar/Navbar";
@@ -13,8 +13,9 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<LandingPage />} />
-          <Route path="/Sign_Up//Sign_Up.html" element={<Sign_Up />} />
-          <Route path="/Login/Login.html" element={<Login />} />
+          <Route path="/Sign_Up" element={<Sign_Up />} />
+          <Route path="/Login" element={<Login />} />
+          <Route path="*" element={<LandingPage />} /> {/* Fallback Route */}
         </Routes>
       </BrowserRouter>
     </div>
