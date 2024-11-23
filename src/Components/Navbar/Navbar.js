@@ -19,7 +19,7 @@ export default function Navbar() {
 
         <ul className="nav__links active">
           <li className="link">
-            <a className="nav_link" href="../Landing_Page/LandingPage.html">
+            <a className="nav_link" href="/">
               Home
             </a>
           </li>
@@ -29,12 +29,12 @@ export default function Navbar() {
             </a>
           </li>
           <li className="link">
-            <a className="btn1" href="../Sign_Up//Sign_Up.html">
+            <a className="btn1" href="/Sign_Up//Sign_Up.html">
               Sign Up
             </a>
           </li>
           <li className="link">
-            <a className="btn1" href="../Login/Login.html">
+            <a className="btn1" href="/Login/Login.html">
               Login
             </a>
           </li>

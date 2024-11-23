@@ -37,7 +37,8 @@
 /* Styles for additional signup text */
 .signup-text1 {
     grid-column: -1 / 3; /* Span from second to third column from the end */
-    text-align: right; /* Right-align text */
+    text-align: center; /* Right-align text */
+    width: 80%;
 }
 
 .signup-text1 span {
@@ -125,4 +126,8 @@ form {
 .btn-danger {
     background-color: #dc3545; /* Set background color for danger button */
     color: #fff; /* Set text color for danger button */
+}
+
+label {
+    text-align: left;
 }
