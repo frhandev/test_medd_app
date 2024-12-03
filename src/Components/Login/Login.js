@@ -68,7 +68,7 @@ const Login = () => {
           <div className="login-text">
             Are you a new member? 
             <span>
-              <Link to="/signup" style={{ color: '#2190FF' }}>
+              <Link to="/sign_up" style={{ color: '#2190FF' }}>
                 Sign Up Here
               </Link>
             </span>
@@ -91,7 +91,19 @@ const Login = () => {
                 />
               </div>
               {/* Input field for password */}
-              // write logic code for password input box
+              <div className="form-group">
+               <label htmlFor="password">Password</label>
+               <input
+                 value={password}
+                 onChange={(e) => setPassword(e.target.value)}
+                 type="password"
+                 name="password"
+                 id="password"
+                 className="form-control"
+                 placeholder="Enter your password"
+                 aria-describedby="helpId"
+               />
+             </div>
               <div className="btn-group">
                 {/* Login button */}
                 <button type="submit" className="btn btn-primary mb-2 mr-1 waves-effect waves-light">
