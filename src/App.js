@@ -8,14 +8,14 @@ import Login from "./Components/Login/Login";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" id="App">
       <BrowserRouter>
         <Navbar />
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/Sign_Up" element={<Sign_Up />} />
           <Route path="/Login" element={<Login />} />
-          <Route path="*" element={<LandingPage />} /> {/* Fallback Route */}
+          <Route path="*" element={<LandingPage />} />
         </Routes>
       </BrowserRouter>
     </div>

@@ -53,6 +53,7 @@ const Sign_Up = () => {
           sessionStorage.setItem("user", data.name); // Save user data
           alert("Sign-Up Successful!");
           navigate("/"); // Redirect to home page
+          window.location.reload();
         } else {
           setErrors({ api: data.error || "Sign-Up failed. Please try again." });
         }
@@ -78,7 +79,6 @@ const Sign_Up = () => {
           Are you a new member?{" "}
           <span>
             <a href="/Login" style={{ color: "#2190FF;" }}>
-              {" "}
               Login Here
             </a>
           </span>
@@ -96,7 +96,13 @@ const Sign_Up = () => {
                 className="form-control"
                 placeholder="Enter your name"
               />
-              {errors.name && <small className="error">{errors.name}</small>}
+              {errors.name && (
+                <small className="error">
+                  {typeof errors.name === "object"
+                    ? errors.name.msg
+                    : errors.name}
+                </small>
+              )}
             </div>
             <div className="form-group">
               <label htmlFor="phone">Phone</label>
@@ -109,7 +115,13 @@ const Sign_Up = () => {
                 className="form-control"
                 placeholder="Enter your phone number"
               />
-              {errors.phone && <small className="error">{errors.phone}</small>}
+              {errors.phone && (
+                <small className="error">
+                  {typeof errors.phone === "object"
+                    ? errors.phone.msg
+                    : errors.phone}
+                </small>
+              )}
             </div>
             <div className="form-group">
               <label htmlFor="email">Email</label>
@@ -122,7 +134,13 @@ const Sign_Up = () => {
                 className="form-control"
                 placeholder="Enter your email"
               />
-              {errors.email && <small className="error">{errors.email}</small>}
+              {errors.email && (
+                <small className="error">
+                  {typeof errors.email === "object"
+                    ? errors.email.msg
+                    : errors.email}
+                </small>
+              )}
             </div>
             <div className="form-group">
               <label htmlFor="password">Password</label>
@@ -136,7 +154,11 @@ const Sign_Up = () => {
                 placeholder="Enter your password"
               />
               {errors.password && (
-                <small className="error">{errors.password}</small>
+                <small className="error">
+                  {typeof errors.password === "object"
+                    ? errors.password.msg
+                    : errors.password}
+                </small>
               )}
             </div>
             {errors.api && <div className="error">{errors.api}</div>}

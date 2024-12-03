@@ -1,3 +1,5 @@
-// apiConfig.js
-export const API_URL = process.env.REACT_APP_API_URL || "http://localhost:3000";
+export const API_URL =
+  window.location.hostname === "localhost"
+    ? "http://localhost:3000"
+    : "add your theia server side url";
 console.log("API_URL :", API_URL);
