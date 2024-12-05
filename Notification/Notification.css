@@ -1,0 +1,41 @@
+.notification-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 300px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    z-index: 1000;
+  }
+  
+  .notification-content {
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  .notification-content h3 {
+    margin-top: 0;
+    font-size: 1.2em;
+    color: #007bff;
+  }
+  
+  .notification-content p {
+    margin: 5px 0;
+  }
+  
+  .close-btn {
+    margin-top: 10px;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .close-btn:hover {
+    background-color: #c82333;
+  }
+  
